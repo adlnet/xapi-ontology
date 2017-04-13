@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<rdf:RDF xml:base='https://w3id.org/xapi/ontology#' xmlns:dcterms='http://purl.org/dc/terms/' xmlns:foaf='http://xmlns.com/foaf/0.1/' xmlns:owl='http://www.w3.org/2002/07/owl#' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#' xmlns:skos='http://www.w3.org/2004/02/skos/core#' xmlns:xapi='https://w3id.org/xapi/ontology#' xmlns:xml='http://www.w3.org/XML/1998/namespace' xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+  <owl:Ontology rdf:about='https://w3id.org/xapi/ontology#'>
+    <rdfs:label xml:lang='en'>xAPI Ontology</rdfs:label>
+    <dcterms:created rdf:datatype='http://www.w3.org/2001/XMLSchema#date'>2015-11-19</dcterms:created>
+    <dcterms:modified rdf:datatype='http://www.w3.org/2001/XMLSchema#date'>2017-04-13</dcterms:modified>
+    <rdfs:comment xml:lang='en'>This ontology contains the classes and properties that are used when for semantically expressing the structure and relationships of xAPI data.</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about='https://w3id.org/xapi/ontology#ActivityType'>
+    <rdfs:label xml:lang='en'>ActivityType</rdfs:label>
+    <rdfs:comment xml:lang='en'>The Class for an Activity Type in an xAPI vocabulary or profile.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about='https://w3id.org/xapi/ontology#ActivityDefinition'>
+        <rdfs:label xml:lang='en'>Activity</rdfs:label>
+        <rdfs:comment xml:lang='en'>The Class used for the ActivityDefinition object in xAPI.</rdfs:comment>
+        <rdfs:subClassOf>
+          <owl:Class rdf:about='https://w3id.org/xapi/ontology#Activity'>
+            <rdfs:label xml:lang='en'>Activity</rdfs:label>
+            <rdfs:comment xml:lang='en'>The Class used for the Activity Object in xAPI.</rdfs:comment>
+            <rdfs:subClassOf>
+              <owl:Class rdf:about='https://w3id.org/xapi/ontology#Object'>
+                <rdfs:label xml:lang='en'>Object</rdfs:label>
+                <rdfs:comment xml:lang='en'>The Class used for the Object in xAPI.</rdfs:comment>
+                <rdfs:subClassOf>
+                  <owl:Class rdf:about='https://w3id.org/xapi/ontology#Statement'>
+                    <rdfs:label xml:lang='en'>Statement</rdfs:label>
+                    <rdfs:comment xml:lang='en'>The Class used to represent a Statement object in xAPI.</rdfs:comment>
+                  </owl:Class>
+                </rdfs:subClassOf>
+              </owl:Class>
+            </rdfs:subClassOf>
+          </owl:Class>
+        </rdfs:subClassOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+     <rdfs:subClassOf rdf:resource='http://www.w3.org/2004/02/skos/core#Concept' />
+  </owl:Class>
+  <owl:AllDisjointClasses rdf:about='https://w3id.org/xapi/ontology#AllDisjointClasses'>
+    <owl:members rdf:parseType='Collection'>
+      <owl:Class rdf:about='https://w3id.org/xapi/ontology#Actor'>
+        <rdfs:label xml:lang='en'>Actor</rdfs:label>
+        <rdfs:comment xml:lang='en'>The Class used for the Actor object in xAPI.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource='https://w3id.org/xapi/ontology#Statement' />
+      </owl:Class>
+      <owl:Class rdf:about='https://w3id.org/xapi/ontology#Verb'>
+        <rdfs:label xml:lang='en'>Verb</rdfs:label>
+        <rdfs:comment xml:lang='en'>The Class used for a Verb object in xAPI.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource='http://www.w3.org/2004/02/skos/core#Concept' />
+         <rdfs:subClassOf rdf:resource='https://w3id.org/xapi/ontology#Statement' />
+      </owl:Class>
+      <rdf:Description rdf:about='https://w3id.org/xapi/ontology#Object' />
+      <owl:Class rdf:about='https://w3id.org/xapi/ontology#Context'>
+        <rdfs:label xml:lang='en'>Context</rdfs:label>
+        <rdfs:comment xml:lang='en'>The Class used for an Context object in xAPI.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource='https://w3id.org/xapi/ontology#Statement' />
+      </owl:Class>
+      <owl:Class rdf:about='https://w3id.org/xapi/ontology#Result'>
+        <rdfs:label xml:lang='en'>Result</rdfs:label>
+        <rdfs:comment xml:lang='en'>The Class used for a Result object in xAPI.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource='https://w3id.org/xapi/ontology#Statement' />
+      </owl:Class>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <owl:ObjectProperty rdf:about='https://w3id.org/xapi/ontology#Authority'>
+    <rdfs:label xml:lang='en'>Authority</rdfs:label>
+    <rdfs:comment xml:lang='en'>The Class used for the Authority object in xAPI. The Authority is the Agent or Group who is asserting this Statement is true. Verified by the LRS based on authentication. Set by LRS if not provided or if a strong trust relationship between the Learning Record Provider and LRS has not been established.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about='https://w3id.org/xapi/ontology#ContextActivities'>
+    <rdfs:label xml:lang='en'>ContextActivities</rdfs:label>
+    <rdfs:comment xml:lang='en'>The Class used for a ContextActivities object in xAPI.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource='https://w3id.org/xapi/ontology#Context' />
+  </owl:Class>
+  <owl:Class rdf:about='https://w3id.org/xapi/ontology#Score'>
+    <rdfs:label xml:lang='en'>Result</rdfs:label>
+    <rdfs:comment xml:lang='en'>The Class used for a Score object in xAPI.</rdfs:comment>
+    <rdfs:subClassof rdf:resource='https://w3id.org/xapi/ontology#Result' />
+  </owl:Class>
+  <owl:ObjectProperty rdf:about='https://w3id.org/xapi/ontology#SubStatement'>
+    <rdfs:label xml:lang='en'>SubStatement</rdfs:label>
+    <rdfs:comment xml:lang='en'>The Class used for a Sub Statement object in xAPI.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about='https://w3id.org/xapi/ontology#closelyRelatedNaturalLanguageTerm'>
+    <rdfs:label xml:lang='en'>closelyRelatedNaturalLanguageTerm</rdfs:label>
+    <rdfs:comment xml:lang='en'>A property used to connect the xAPI term to a specific sense, or meaning, in natural language that is very closely related. The sense will be identified with Wordnet, a carefully constructed ontology that aids in word sense disambiguation, which has been used with many different languages.</rdfs:comment>
+    <rdfs:domain rdf:resource='http://www.w3.org/2004/02/skos/core#Concept' />
+    <rdfs:range rdf:resource='http://wordnet-rdf.princeton.edu/ontology#Synset' />
+    <rdfs:subPropertyOf rdf:resource='http://www.w3.org/2004/02/skos/core#relatedMatch' />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#completion'>
+    <rdfs:label xml:lang='en'>completion</rdfs:label>
+    <rdfs:comment xml:lang='en'>A property used to provide the completion status (true or false) of a Result object in xAPI.</rdfs:comment>
+    <rdfs:domain rdf:resource='https://w3id.org/xapi/ontology#Result' />
+    <rdfs:range rdf:resource='http://www.w3.org/2001/XMLSchema#boolean' />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#description'>
+    <rdfs:label xml:lang='en'>description</rdfs:label>
+    <rdfs:comment xml:lang='en'>A property used to provide the name of an object in xAPI.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about='https://w3id.org/xapi/ontology#DescriptionPropertyUnion'>
+        <rdfs:label xml:lang='en'>DescriptionPropertyUnion</rdfs:label>
+        <rdfs:comment xml:lang='en'>The Class used to create a multiple domain axiom for the description property so it can be used with multiple Classes.</rdfs:comment>
+        <owl:unionOf rdf:parseType='Collection'>
+          <rdf:Description rdf:about='https://w3id.org/xapi/ontology#ActivityDefinition' />
+          <rdf:Description rdf:about='https://w3id.org/xapi/ontology#Attachment' />
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource='http://www.w3.org/2001/XMLSchema#string' />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#duration'>
+    <rdfs:label xml:lang='en'>duration</rdfs:label>
+    <rdfs:comment xml:lang='en'>Period of time over which the Statement occurred. Formatted according to ISO 8601 with a precision of 0.01 seconds</rdfs:comment>
+    <rdfs:domain rdf:resource='https://w3id.org/xapi/ontology#Result' />
+    <rdfs:range rdf:resource='http://www.w3.org/2001/XMLSchema#duration' />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about='https://w3id.org/xapi/ontology#extensions'>
+    <rdfs:label xml:lang='en'>extensions</rdfs:label>
+    <rdfs:comment xml:lang='en'>A property used to define the extensions object in xAPI.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about='https://w3id.org/xapi/ontology#ExtensionsUnion'>
+        <rdfs:label xml:lang='en'>ExtensionsUnion</rdfs:label>
+        <rdfs:comment xml:lang='en'>The Class used to create a multiple domain axiom for the extensions property so it can be used with multiple Classes.</rdfs:comment>
+        <owl:unionOf rdf:parseType='Collection'>
+          <rdf:Description rdf:about='https://w3id.org/xapi/ontology#Activity' />
+          <rdf:Description rdf:about='https://w3id.org/xapi/ontology#Result' />
+          <rdf:Description rdf:about='https://w3id.org/xapi/ontology#Context' />
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#homePage'>
+    <rdfs:label xml:lang='en'>homePage</rdfs:label>
+    <rdfs:comment>The canonical home page for the system the account is on. This is based on FOAF's accountServiceHomePage.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about='https://w3id.org/xapi/ontology#Account'>
+        <rdfs:label xml:lang='en'>Account</rdfs:label>
+        <rdfs:comment xml:lang='en'>The Class used for the Account object in xAPI.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource='https://w3id.org/xapi/ontology#Actor' />
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource='http://www.w3.org/2001/XMLSchema#anyURI' />
+    <rdfs:subPropertyOf rdf:resource='http://xmlns.com/foaf/0.1/accountServiceHomepage' />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#mbox'>
+    <rdfs:label xml:lang='en'>mbox</rdfs:label>
+    <rdfs:comment>The required format is mailto:user@emailaddress. Only email addresses that have only ever been and will ever be assigned to this Agent, but no others, SHOULD be used for this property and mbox_sha1sum.</rdfs:comment>
+    <rdfs:domain rdf:resource='https://w3id.org/xapi/ontology#Actor' />
+    <rdfs:subPropertyOf rdf:resource='http://xmlns.com/foaf/0.1/mbox' />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#mbox_sha1sum'>
+    <rdfs:label xml:lang='en'>mbox_sha1sum</rdfs:label>
+    <rdfs:comment>The hex-encoded SHA1 hash of a mailto IRI (i.e. the value of an mbox property). An LRS MAY include Agents with a matching hash when a request is based on an mbox.</rdfs:comment>
+    <rdfs:domain rdf:resource='https://w3id.org/xapi/ontology#Actor' />
+    <rdfs:subPropertyOf rdf:resource='http://xmlns.com/foaf/0.1/mbox_sha1sum' />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#member'>
+    <rdfs:label xml:lang='en'>member</rdfs:label>
+    <rdfs:comment xml:lang='en'>A property used to provide the members of a group object in xAPI.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about='https://w3id.org/xapi/ontology#MemberUnion'>
+        <rdfs:label xml:lang='en'>MemberUnion</rdfs:label>
+        <rdfs:comment xml:lang='en'>The Class used to create a multiple domain axiom for the member property so it can be used with multiple Classes.</rdfs:comment>
+        <owl:unionOf rdf:parseType='Collection'>
+          <owl:Class rdf:about='https://w3id.org/xapi/ontology#AnonymousGroup'>
+            <rdfs:label xml:lang='en'>AnonymousGroup</rdfs:label>
+            <rdfs:comment xml:lang='en'>The Class used for an Anonymous Group object in xAPI.</rdfs:comment>
+            <rdfs:subClassOf rdf:resource='https://w3id.org/xapi/ontology#Actor' />
+          </owl:Class>
+          <owl:Class rdf:about='https://w3id.org/xapi/ontology#IdentifiedGroup'>
+            <rdfs:label xml:lang='en'>Group</rdfs:label>
+            <rdfs:comment xml:lang='en'>The Class used for an Identified Group object in xAPI.</rdfs:comment>
+            <rdfs:subClassOf rdf:resource='https://w3id.org/xapi/ontology#Actor' />
+          </owl:Class>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#name'>
+    <rdfs:label xml:lang='en'>name</rdfs:label>
+    <rdfs:comment xml:lang='en'>A property used to provide the name of an object in xAPI.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about='https://w3id.org/xapi/ontology#NamePropertyUnion'>
+        <rdfs:label xml:lang='en'>NamePropertyUnion</rdfs:label>
+        <rdfs:comment xml:lang='en'>The Class used to create a multiple domain axiom for the name property so it can be used with multiple Classes.</rdfs:comment>
+        <owl:unionOf rdf:parseType='Collection'>
+          <owl:Class rdf:about='https://w3id.org/xapi/ontology#Agent'>
+            <rdfs:label xml:lang='en'>Agent</rdfs:label>
+            <rdfs:comment xml:lang='en'>The Class used for the Agent object in xAPI.</rdfs:comment>
+            <rdfs:subClassOf rdf:resource='https://w3id.org/xapi/ontology#Actor' />
+          </owl:Class>
+          <rdf:Description rdf:about='https://w3id.org/xapi/ontology#Account' />
+          <rdf:Description rdf:about='https://w3id.org/xapi/ontology#AnonymousGroup' />
+          <rdf:Description rdf:about='https://w3id.org/xapi/ontology#IdentifiedGroup' />
+          <rdf:Description rdf:about='https://w3id.org/xapi/ontology#ActivityDefinition' />
+          <owl:ObjectProperty rdf:about='https://w3id.org/xapi/ontology#StatementRef'>
+            <rdfs:label xml:lang='en'>StatementRef</rdfs:label>
+            <rdfs:comment xml:lang='en'>The Class used for a Statement Reference object in xAPI.</rdfs:comment>
+          </owl:ObjectProperty>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource='http://www.w3.org/2001/XMLSchema#string' />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#openid'>
+    <rdfs:label xml:lang='en'>openid</rdfs:label>
+    <rdfs:comment>An openID that uniquely identifies the Agent.</rdfs:comment>
+    <rdfs:domain rdf:resource='https://w3id.org/xapi/ontology#Actor' />
+    <rdfs:range rdf:resource='http://www.w3.org/2001/XMLSchema#anyURI' />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about='https://w3id.org/xapi/ontology#referencedBy'>
+    <rdfs:label xml:lang='en'>referencedBy</rdfs:label>
+    <rdfs:comment xml:lang='en'>A property used to connects an xapi:Verb not directly maintained by the vocabulary author to a vocabulary that is reusing and referencing the term.</rdfs:comment>
+    <rdfs:range rdf:resource='http://www.w3.org/2004/02/skos/core#ConceptScheme' />
+    <rdfs:subPropertyOf rdf:resource='http://www.w3.org/2004/02/skos/core#inScheme' />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#registration'>
+    <rdfs:label xml:lang='en'>registration</rdfs:label>
+    <rdfs:comment xml:lang='en'>A property used to provide the registration identifier of a Context object in xAPI.</rdfs:comment>
+    <rdfs:domain rdf:resource='https://w3id.org/xapi/ontology#Context' />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#response'>
+    <rdfs:label xml:lang='en'>response</rdfs:label>
+    <rdfs:comment xml:lang='en'>A property used to provide a textual response in the Result object.</rdfs:comment>
+    <rdfs:domain rdf:resource='https://w3id.org/xapi/ontology#Result' />
+    <rdfs:range rdf:resource='http://www.w3.org/2001/XMLSchema#string' />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#stored'>
+    <rdfs:label xml:lang='en'>stored</rdfs:label>
+    <rdfs:comment xml:lang='en'>The time at which a Statement is stored by the LRS. This can be any time between when the LRS receives the Statement and when it is written to storage. Formatted in milliseconds according to ISO 8601's normal format.</rdfs:comment>
+    <rdfs:domain rdf:resource='https://w3id.org/xapi/ontology#Statement' />
+    <rdfs:range rdf:resource='http://www.w3.org/2001/XMLSchema#dateTime' />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#success'>
+    <rdfs:label xml:lang='en'>success</rdfs:label>
+    <rdfs:comment xml:lang='en'>A property used to provide the success status (true or false) of a Result object in xAPI.</rdfs:comment>
+    <rdfs:domain rdf:resource='https://w3id.org/xapi/ontology#Result' />
+    <rdfs:range rdf:resource='http://www.w3.org/2001/XMLSchema#boolean' />
+  </owl:DatatypeProperty>
+  <owl:AnnotationProperty rdf:about='https://w3id.org/xapi/ontology#thirdPartyLabel'>
+    <rdfs:label xml:lang='en'>thirdPartyLabel</rdfs:label>
+    <rdfs:comment xml:lang='en'>A property used by people who did not create the original verb, but would like to offer an alternative label for it.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource='http://www.w3.org/2004/02/skos/core#altLabel' />
+  </owl:AnnotationProperty>
+  <owl:DatatypeProperty rdf:about='https://w3id.org/xapi/ontology#timeStamp'>
+    <rdfs:label xml:lang='en'>timeStamp</rdfs:label>
+    <rdfs:comment xml:lang='en'>Timestamps represent a specific time and are formatted in milliseconds according to ISO 8601's normal format.</rdfs:comment>
+    <rdfs:domain rdf:resource='https://w3id.org/xapi/ontology#Statement' />
+    <rdfs:range rdf:resource='http://www.w3.org/2001/XMLSchema#dateTime' />
+  </owl:DatatypeProperty>
+  <owl:AnnotationProperty rdf:about='https://w3id.org/xapi/ontology#version'>
+    <rdfs:label xml:lang='en'>version</rdfs:label>
+    <rdfs:comment>The Statement’s associated xAPI version, formatted according to Semantic Versioning 1.0.0.</rdfs:comment>
+    <rdfs:domain rdf:resource='https://w3id.org/xapi/ontology#Statement' />
+    <rdfs:range rdf:resource='http://www.w3.org/2001/XMLSchema#string' />
+  </owl:AnnotationProperty>
+
+</rdf:RDF>

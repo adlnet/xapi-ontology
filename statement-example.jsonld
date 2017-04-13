@@ -1,0 +1,76 @@
+
+Original Statement Example
+
+{
+    "actor": {
+        "mbox": "mailto:johnny@appleseed.com",
+        "name": "Johnny Appleseed",
+        "objectType": "Agent",
+		"account": {
+			"homePage": "http://lms.companyname.com",
+			"name": "jappleseed79"
+		}          
+    },
+    "verb": {
+        "id": "https://w3id.org/xapi/video/verbs/completed",
+        "display": {
+            "en-US": "completed"
+        }
+    },
+    "object": {
+        "id": "https://www.youtube.com/watch?v=w6z2JsTV1WY",
+        "definition": {
+            "name": {
+                "en-US": "Learning How to Carry"
+            },
+            "description": {
+                "en-US": "Video on how to carry a person during a fire rescue."
+            },
+            "type": "https://w3id.org/xapi/video/activity-type/video"
+        },
+        "objectType": "Activity"
+    },
+    "result": {
+        "duration": "PT2M17S"
+    }
+}
+
+JSON-LD Example
+
+{
+	"@context": "http://xapi.vocab.pub/statement-context.jsonld",
+	"id": "urn:uuid:21e43acb-a8da-445c-b4e9-e0a16a3505f9",
+  	"objectType": "Statement",
+    "actor": {
+        "mbox": "mailto:johnny@appleseed.com",
+        "name": "Johnny Appleseed",
+        "objectType": "Agent",
+		"account": {
+			"homePage": "http://lms.companyname.com",
+			"name": "jappleseed79"
+		}        
+    },
+    "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/completed",
+        "display": {
+            "en-US": "completed"
+        }     
+    },
+    "object": {
+        "id": "https://www.youtube.com/watch?v=w6z2JsTV1WY",
+        "definition": {
+            "name": {
+                "en-US": "Learning How to Carry"
+            },
+            "description": {
+                "en-US": "Video on how to carry a person during a fire rescue."
+            },
+            "type": "https://w3id.org/xapi/video/activity-type/video"
+        },
+        "objectType": "Activity"
+    },
+    "result": {
+        "duration": "PT2M17S"
+    }
+}
+
