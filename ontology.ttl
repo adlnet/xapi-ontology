@@ -324,8 +324,7 @@ xapi:MemberUnion a owl:Class ;
 xapi:member a owl:DatatypeProperty ;
 	rdfs:label "member"@en ;
 	rdfs:comment "A property used to provide the members of a group object in xAPI."@en ;
-	rdfs:domain xapi:MemberUnion .
->>>>>>> Stashed changes
+	rdfs:domain xapi:MemberUnion . 
 
 
 
