@@ -1,0 +1,38 @@
+{
+  "@context": "http://xapi.vocab.pub/statement-context.jsonld",
+  "@id": "urn:uuid:21e43acb-a8da-445c-b4e9-e0a16a3505f9",
+  "@type": "Statement",
+  "Actor": {
+    "@type": "Agent",
+    "Account": {
+      "homePage": "http://lms.companyname.com",
+      "name": "jappleseed79"
+    },
+    "mbox": "mailto:johnny@appleseed.com",
+    "name": "Johnny Appleseed"
+  },
+  "Verb": {
+    "@id": "http://adlnet.gov/expapi/verbs/completed",
+    "display": {
+      "en-us": "completed"
+    }
+  },  
+  "Object": {
+    "@id": "https://www.youtube.com/watch?v=w6z2JsTV1WY",
+    "@type": "Activity",
+    "ActivityDefinition": {
+      "ActivityType": {
+        "@id": "https://w3id.org/xapi/video/activity-type/video"
+      },
+      "description": {
+        "en-us": "Video on how to carry a person during a fire rescue."
+      },
+      "name": {
+        "en-us": "Learning How to Carry"
+      }
+    }
+  },
+  "Result": {
+    "duration": "PT2M17S"
+  }
+}
