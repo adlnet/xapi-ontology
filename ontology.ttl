@@ -121,24 +121,6 @@ xapi:Verb a owl:Class ;
 ### Verb Properties    
 ################################################################# 
 
-
-# All Classes
-xapi:ActivityType a owl:Class ;
-    rdfs:label "ActivityType"@en ;
-    rdfs:comment "The Class for a Activity Type in an xAPI vocabulary or profile."@en ;
-    rdfs:subClassOf skos:Concept .
-
-xapi:Extension a owl:Class ;
-    rdfs:label "Extension"@en ;
-    rdfs:comment "The Class for an Extension in an xAPI vocabulary or profile."@en ;
-    rdfs:subClassOf skos:Concept .
-
-xapi:Verb a owl:Class ;
-    rdfs:label "Verb"@en ;
-    rdfs:comment "The Class for a Verb in an xAPI vocabulary or profile."@en ;
-    rdfs:subClassOf skos:Concept .
-
-# All Properties
 xapi:closelyRelatedNaturalLanguageTerm a owl:ObjectProperty ;
     rdfs:label "closelyRelatedNaturalLanguageTerm"@en ;
     rdfs:comment "A property used to connect the xAPI term to a specific sense, or meaning, in natural language that is very closely related. The sense will be identified with Wordnet, a carefully constructed ontology that aids in word sense disambiguation, which has been used with many different languages."@en ;
