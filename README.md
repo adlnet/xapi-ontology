@@ -1,2 +1,2 @@
 # xapi-ontology
-xAPI Statement Data Model represented as RDF Classes and Properties. 
+xAPI Statement Data Model represented as RDF Classes and Properties. This illustrates that xAPI statements can become much more meaningful and machine understandable with an ontology by simply adding a JSON-LD context without having to change any objects or properties in the core statement model. You can put the example statements into JSON-LD playground here for validation and expansion: http://json-ld.org/playground/. 
