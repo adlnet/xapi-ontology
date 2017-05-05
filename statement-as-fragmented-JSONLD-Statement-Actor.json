@@ -1,0 +1,35 @@
+{
+    "@context": {
+        "xapi": "https://w3id.org/xapi/ontology#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "Agent": "xapi:Agent",
+        "account": {
+            "@id": "xapi:Account",
+            "@type": "@id"
+        },
+        "name": {
+            "@id": "xapi:name",
+            "@container": "@language"
+        },
+        "mbox": {
+            "@id": "xapi:mbox",
+            "@type": "http://www.w3.org/2000/04/maillog2rdf/email#addr-spec"
+        },
+        "account": {
+            "@id": "xapi:account",
+            "@type": "xapi:Account"
+        },
+        "Account": "xapi:Account",
+        "homePage": {
+            "@id": "xapi:homePage"
+        }
+    },
+    "@id": "https://raw.githubusercontent.com/jhaag75/xapi-ontology/master/statement-as-fragmented-JSONLD-Statement-Actor.json",
+    "@type": "Agent",
+    "mbox": "mailto:johnny@appleseed.com",
+    "name": "Johnny Appleseed",
+    "account": {
+        "homePage": "http://lms.companyname.com",
+        "name": "jappleseed79"
+    }
+}

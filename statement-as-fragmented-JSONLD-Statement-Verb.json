@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "xapi": "https://w3id.org/xapi/ontology#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "Verb": "xapi:Verb",
+        "sameAs": {
+            "@id": "schema:sameAs"
+        },
+        "display": {
+            "@id": "xapi:display",
+            "@container": "@language"
+        }
+    },
+    "@id": "https://raw.githubusercontent.com/jhaag75/xapi-ontology/master/statement-as-fragmented-JSONLD-Statement-Verb.json",
+    "@type": "Verb",
+    "sameAs": "https://w3id.org/xapi/video/verbs/completed",
+    "display": {
+        "en-US": "completed"
+    }
+}

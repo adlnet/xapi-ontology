@@ -1,0 +1,28 @@
+{
+    "@context": {
+        "xapi": "https://w3id.org/xapi/ontology#",
+        "Statement": "xapi:Statement",
+        "actor": {
+            "@id": "xapi:Actor",
+            "@type": "@id"
+        },
+        "verb": {
+            "@id": "xapi:Verb",
+            "@type": "@id"
+        },
+        "object": {
+            "@id": "xapi:Object",
+            "@type": "@id"
+        },
+        "result": {
+            "@id": "xapi:Result",
+            "@type": "@id"
+        }
+    },
+    "@id": "https://raw.githubusercontent.com/jhaag75/xapi-ontology/master/statement-as-fragmented-JSONLD-Statement.json",
+    "@type": "Statement",
+    "actor": "https://raw.githubusercontent.com/jhaag75/xapi-ontology/master/statement-as-fragmented-JSONLD-Statement-Actor.json",
+    "verb": "https://raw.githubusercontent.com/jhaag75/xapi-ontology/master/statement-as-fragmented-JSONLD-Statement-Verb.json",
+    "object": "https://raw.githubusercontent.com/jhaag75/xapi-ontology/master/statement-as-fragmented-JSONLD-Statement-Object.json",
+    "result": "https://raw.githubusercontent.com/jhaag75/xapi-ontology/master/statement-as-fragmented-JSONLD-Statement-Result.json"
+}

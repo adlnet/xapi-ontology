@@ -1,0 +1,45 @@
+{
+    "@context": {
+        "xapi": "https://w3id.org/xapi/ontology#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "video": "https://w3id.org/xapi/video/activity-type/",
+        "schema": "http://schema.org/",
+        "Activity": "xapi:Activity",
+        "url": {
+            "@id": "schema:url"
+        },
+        "name": {
+            "@id": "xapi:name",
+            "@container": "@language"
+        },
+        "description": {
+            "@id": "xapi:description",
+            "@container": "@language"
+        },
+        "definition": {
+            "@id": "xapi:definition",
+            "@type": "xapi:Definition"
+        },
+        "account": {
+            "@id": "xapi:account",
+            "@type": "xapi:Account"
+        },
+        "VideoDefinition": {
+            "@id": "video:video",
+            "@type": "xapi:Definition"
+        },
+        "Definition": "xapi:Definition"
+    },
+    "@id": "https://raw.githubusercontent.com/jhaag75/xapi-ontology/master/statement-as-fragmented-JSONLD-Statement-Object.json",
+    "@type": "Activity",
+    "url": "https://www.youtube.com/watch?v=w6z2JsTV1WY",
+    "definition": {
+        "@type": "VideoDefinition",
+        "name": {
+            "en-US": "Learning How to Carry"
+        },
+        "description": {
+            "en-US": "Video on how to carry a person during a fire rescue."
+        }
+    }
+}
