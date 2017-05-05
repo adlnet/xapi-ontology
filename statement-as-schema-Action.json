@@ -1,0 +1,16 @@
+{
+    "@context": {
+        "video": "https://w3id.org/xapi/video/",
+        "schema": "http://schema.org/",
+        "CompletedAction": {
+            "@id": "video:CompletedAction",
+            "@type": "schema:Action"
+        }
+    },
+    "@id": "https://raw.githubusercontent.com/jhaag75/xapi-ontology/master/statement-as-schema-Action.json",
+    "@type": "CompletedAction",
+    "agent": "http://lms.company.com/jappleseed79",
+    "object": "https://www.youtube.com/watch?v=w6z2JsTV1WY",
+    "startTime": "2017-05-05T18:34:10+00:00",
+    "endTime": "2017-05-05T18:38:23+00:00"
+}
