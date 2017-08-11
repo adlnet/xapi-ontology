@@ -1,8 +1,8 @@
 
 {
-	"@context": "http://xapi.vocab.pub/statement-context.jsonld",
-	"id": "urn:uuid:51e43acb-a8da-435c-b4e9-e0a16a2505g9",
-  	"objectType": "Statement",
+    "@context": "http://xapi.vocab.pub/statement-context.jsonld",
+    "id": "51e43acb-a8da-435c-b4e9-e0a16a2505g9",
+    "objectType": "Statement",
     "actor": {
         "mbox": "mailto:johnny@appleseed.com",
         "name": "Johnny Appleseed",
