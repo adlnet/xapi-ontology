@@ -121,7 +121,7 @@ xapi:ObjectTypeUnion a owl:Class ;
   owl:unionOf (xapi:Statement xapi:Actor xapi:Object xapi:Authority) .
 
 xapi:objectType a owl:DatatypeProperty ;
-  rdfs:label "objecType"@en ;
+  rdfs:label "objectType"@en ;
   rdfs:comment "A property used to provide the objectType in xAPI."@en ;
   rdfs:domain xapi:ObjectTypeUnion ;
   rdfs:range xsd:string .
