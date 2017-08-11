@@ -1,6 +1,6 @@
 
 {
-    "@context": "http://xapi.vocab.pub/statement-context.jsonld",
+    "@context": "https://adlnet.github.io/xapi-ontology/statement-context.jsonld",
     "id": "51e43acb-a8da-435c-b4e9-e0a16a2505g9",
     "objectType": "Statement",
     "actor": {
