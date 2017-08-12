@@ -22,8 +22,8 @@ xapi:AllDisjointClasses a owl:AllDisjointClasses ;
 #################################################################
 
 xapi:Statement a owl:Class ;
-	rdfs:label "Statement"@en ;
-	rdfs:comment "The Class used to represent a Statement object in xAPI."@en .
+  rdfs:label "Statement"@en ;
+  rdfs:comment "The Class used to represent a Statement object in xAPI."@en .
 
 xapi:SubStatement a owl:Class ;
   rdfs:label "SubStatement"@en ;
@@ -40,22 +40,22 @@ xapi:StatementRef a owl:Class ;
 #################################################################
 
 xapi:stored a owl:DatatypeProperty ;
-	rdfs:label "stored"@en ;
-	rdfs:comment "The time at which a Statement is stored by the LRS. This can be any time between when the LRS receives the Statement and when it is written to storage. Formatted in milliseconds according to ISO 8601's normal format."@en ;
-	rdfs:domain xapi:Statement ;
-	rdfs:range xsd:dateTime .
+  rdfs:label "stored"@en ;
+  rdfs:comment "The time at which a Statement is stored by the LRS. This can be any time between when the LRS receives the Statement and when it is written to storage. Formatted in milliseconds according to ISO 8601's normal format."@en ;
+  rdfs:domain xapi:Statement ;
+  rdfs:range xsd:dateTime .
 
 xapi:timeStamp a owl:DatatypeProperty ;
-	rdfs:label "timeStamp"@en ;
-	rdfs:comment "Timestamps represent a specific time and are formatted in milliseconds according to ISO 8601's normal format."@en ;
-	rdfs:domain xapi:Statement ;
-	rdfs:range xsd:dateTime .
+  rdfs:label "timeStamp"@en ;
+  rdfs:comment "Timestamps represent a specific time and are formatted in milliseconds according to ISO 8601's normal format."@en ;
+  rdfs:domain xapi:Statement ;
+  rdfs:range xsd:dateTime .
 
 xapi:version a owl:AnnotationProperty ;
-	rdfs:label "version"@en ;
-	rdfs:comment "The Statement’s associated xAPI version, formatted according to Semantic Versioning 1.0.0." ;
-	rdfs:domain xapi:Statement ;
-	rdfs:range xsd:string .
+  rdfs:label "version"@en ;
+  rdfs:comment "The Statement’s associated xAPI version, formatted according to Semantic Versioning 1.0.0." ;
+  rdfs:domain xapi:Statement ;
+  rdfs:range xsd:string .
 
 
 #################################################################
@@ -63,9 +63,9 @@ xapi:version a owl:AnnotationProperty ;
 #################################################################
 
 xapi:NamePropertyUnion a owl:Class ;
-	rdfs:label "NamePropertyUnion"@en ;
-	rdfs:comment "The Class used to create a multiple domain axiom for the name property so it can be used with multiple Classes."@en ;
-	owl:unionOf (xapi:Actor xapi:Account xapi:Agent xapi:Group xapi:ActivityDefinition xapi:StatementRef) .
+  rdfs:label "NamePropertyUnion"@en ;
+  rdfs:comment "The Class used to create a multiple domain axiom for the name property so it can be used with multiple Classes."@en ;
+  owl:unionOf (xapi:Actor xapi:Account xapi:Agent xapi:Group xapi:ActivityDefinition xapi:StatementRef) .
 
 xapi:name a owl:DatatypeProperty ;
   rdfs:label "name"@en ;
@@ -85,35 +85,35 @@ xapi:DisplayPropertyUnion a owl:Class ;
   owl:unionOf (xapi:Verb xapi:Attachments) .
 
 xapi:DescriptionPropertyUnion a owl:Class ;
-	rdfs:label "DescriptionPropertyUnion"@en ;
-	rdfs:comment "The Class used to create a multiple domain axiom for the description property so it can be used with multiple Classes."@en ;
-	owl:unionOf (xapi:Object xapi:ActivityDefinition xapi:InteractionComponent xapi:ContextActivities xapi:Attachments) .
+  rdfs:label "DescriptionPropertyUnion"@en ;
+  rdfs:comment "The Class used to create a multiple domain axiom for the description property so it can be used with multiple Classes."@en ;
+  owl:unionOf (xapi:Object xapi:ActivityDefinition xapi:InteractionComponent xapi:ContextActivities xapi:Attachments) .
 
 xapi:description a owl:DatatypeProperty ;
-	rdfs:label "description"@en ;
-	rdfs:comment "A property used to provide the textual description (in a specific language) of an object in xAPI."@en ;
-	rdfs:domain xapi:DescriptionPropertyUnion ;
-	rdfs:range rdf:langString .
+  rdfs:label "description"@en ;
+  rdfs:comment "A property used to provide the textual description (in a specific language) of an object in xAPI."@en ;
+  rdfs:domain xapi:DescriptionPropertyUnion ;
+  rdfs:range rdf:langString .
 
 xapi:ExtensionsUnion a owl:Class ;
-	rdfs:label "ExtensionsUnion"@en ;
-	rdfs:comment "The Class used to create a multiple domain axiom for the extensions property so it can be used with multiple Classes."@en ;
-	owl:unionOf (xapi:ActivityExtension xapi:ResultExtension xapi:ContextExtension) .
+  rdfs:label "ExtensionsUnion"@en ;
+  rdfs:comment "The Class used to create a multiple domain axiom for the extensions property so it can be used with multiple Classes."@en ;
+  owl:unionOf (xapi:ActivityExtension xapi:ResultExtension xapi:ContextExtension) .
 
 xapi:extensions a owl:ObjectProperty ;
-	rdfs:label "extensions"@en ;
-	rdfs:comment "A property used to define the extensions object in xAPI."@en ;
-	rdfs:domain xapi:ExtensionsUnion .
+  rdfs:label "extensions"@en ;
+  rdfs:comment "A property used to define the extensions object in xAPI."@en ;
+  rdfs:domain xapi:ExtensionsUnion .
 
 xapi:MemberUnion a owl:Class ;
-	rdfs:label "MemberUnion"@en ;
-	rdfs:comment "The Class used to create a multiple domain axiom for the member property so it can be used with multiple Classes."@en ;
-	owl:unionOf (xapi:Agent xapi:Group xapi:Authority xapi:Attachments) .
+  rdfs:label "MemberUnion"@en ;
+  rdfs:comment "The Class used to create a multiple domain axiom for the member property so it can be used with multiple Classes."@en ;
+  owl:unionOf (xapi:Agent xapi:Group xapi:Authority xapi:Attachments) .
 
 xapi:member a owl:DatatypeProperty ;
-	rdfs:label "member"@en ;
-	rdfs:comment "A property used to provide the members of a group object in xAPI."@en ;
-	rdfs:domain xapi:MemberUnion .
+  rdfs:label "member"@en ;
+  rdfs:comment "A property used to provide the members of a group object in xAPI."@en ;
+  rdfs:domain xapi:MemberUnion .
 
 xapi:ObjectTypeUnion a owl:Class ;
   rdfs:label "ObjectTypeUnion"@en ;
@@ -144,53 +144,53 @@ xapi:id a owl:DatatypeProperty ;
 #################################################################
 
 xapi:Actor a owl:Class ;
-	rdfs:label "Actor"@en ;
-	rdfs:comment "The Class used for the Actor object in xAPI."@en ;
-	rdfs:subClassOf xapi:Statement .
+  rdfs:label "Actor"@en ;
+  rdfs:comment "The Class used for the Actor object in xAPI."@en ;
+  rdfs:subClassOf xapi:Statement .
 
 xapi:Agent a owl:Class ;
-	rdfs:label "Agent"@en ;
-	rdfs:comment "The Class used for the Agent object in xAPI."@en ;
-	rdfs:subClassOf xapi:Actor .
+  rdfs:label "Agent"@en ;
+  rdfs:comment "The Class used for the Agent object in xAPI."@en ;
+  rdfs:subClassOf xapi:Actor .
 
 xapi:Account a owl:Class ;
-	rdfs:label "Account"@en ;
-	rdfs:comment "The Class used for the Account object in xAPI."@en ;
-	rdfs:subClassOf xapi:Actor .
+  rdfs:label "Account"@en ;
+  rdfs:comment "The Class used for the Account object in xAPI."@en ;
+  rdfs:subClassOf xapi:Actor .
 
 xapi:Group a owl:Class ;
-	rdfs:label "Group"@en ;
-	rdfs:comment "The Class used for an Anonymous or Identified Group object in xAPI."@en ;
-	rdfs:subClassOf xapi:Actor .
+  rdfs:label "Group"@en ;
+  rdfs:comment "The Class used for an Anonymous or Identified Group object in xAPI."@en ;
+  rdfs:subClassOf xapi:Actor .
 
 #################################################################
 ### Actor Properties
 #################################################################
 
 xapi:mbox a owl:DatatypeProperty ;
-	rdfs:label "mbox"@en ;
-	rdfs:comment "The required format is mailto:user@emailaddress. Only email addresses that have only ever been and will ever be assigned to this Agent, but no others, SHOULD be used for this property and mbox_sha1sum." ;
-	rdfs:domain xapi:Actor ;
-	rdfs:subPropertyOf foaf:mbox .
+  rdfs:label "mbox"@en ;
+  rdfs:comment "The required format is mailto:user@emailaddress. Only email addresses that have only ever been and will ever be assigned to this Agent, but no others, SHOULD be used for this property and mbox_sha1sum." ;
+  rdfs:domain xapi:Actor ;
+  rdfs:subPropertyOf foaf:mbox .
 
 xapi:mbox_sha1sum a owl:DatatypeProperty ;
-	rdfs:label "mbox_sha1sum"@en ;
-	rdfs:comment "The hex-encoded SHA1 hash of a mailto IRI (i.e. the value of an mbox property). An LRS MAY include Agents with a matching hash when a request is based on an mbox." ;
-	rdfs:domain xapi:Actor ;
-	rdfs:subPropertyOf foaf:mbox_sha1sum .
+  rdfs:label "mbox_sha1sum"@en ;
+  rdfs:comment "The hex-encoded SHA1 hash of a mailto IRI (i.e. the value of an mbox property). An LRS MAY include Agents with a matching hash when a request is based on an mbox." ;
+  rdfs:domain xapi:Actor ;
+  rdfs:subPropertyOf foaf:mbox_sha1sum .
 
 xapi:openid a owl:DatatypeProperty ;
-	rdfs:label "openid"@en ;
-	rdfs:comment "An openID that uniquely identifies the Agent." ;
-	rdfs:domain xapi:Actor ;
-	rdfs:range xsd:anyURI .
+  rdfs:label "openid"@en ;
+  rdfs:comment "An openID that uniquely identifies the Agent." ;
+  rdfs:domain xapi:Actor ;
+  rdfs:range xsd:anyURI .
 
 xapi:homePage a owl:DatatypeProperty ;
-	rdfs:label "homePage"@en ;
-	rdfs:comment "The canonical home page for the system the account is on. This is based on FOAF's accountServiceHomePage." ;
-	rdfs:domain xapi:Account ;
-	rdfs:range xsd:anyURI ;
-	rdfs:subPropertyOf foaf:accountServiceHomepage .
+  rdfs:label "homePage"@en ;
+  rdfs:comment "The canonical home page for the system the account is on. This is based on FOAF's accountServiceHomePage." ;
+  rdfs:domain xapi:Account ;
+  rdfs:range xsd:anyURI ;
+  rdfs:subPropertyOf foaf:accountServiceHomepage .
 
 
 #################################################################
@@ -208,21 +208,21 @@ xapi:Verb a owl:Class ;
 #################################################################
 
 xapi:Object a owl:Class ;
-	rdfs:label "Object"@en ;
-	rdfs:comment "The Class used for the Object in xAPI."@en ;
-	rdfs:subClassOf xapi:Statement .
+  rdfs:label "Object"@en ;
+  rdfs:comment "The Class used for the Object in xAPI."@en ;
+  rdfs:subClassOf xapi:Statement .
 
 xapi:Activity a owl:Class ;
-	rdfs:label "Activity"@en ;
-	rdfs:comment "The Class used for the Activity Object in xAPI."@en ;
-	rdfs:subClassOf xapi:Object ;
-  	rdfs:subClassOf skos:Concept .
+  rdfs:label "Activity"@en ;
+  rdfs:comment "The Class used for the Activity Object in xAPI."@en ;
+  rdfs:subClassOf xapi:Object ;
+  rdfs:subClassOf skos:Concept .
 
 xapi:ActivityDefinition a owl:Class ;
-	rdfs:label "Activity"@en ;
-	rdfs:comment "The Class used for the ActivityDefinition object in xAPI."@en ;
-	rdfs:subClassOf xapi:Activity ;
-  	rdfs:subClassOf skos:Concept .
+  rdfs:label "Activity"@en ;
+  rdfs:comment "The Class used for the ActivityDefinition object in xAPI."@en ;
+  rdfs:subClassOf xapi:Activity ;
+  rdfs:subClassOf skos:Concept .
 
 xapi:ActivityType a owl:Class ;
   rdfs:label "ActivityType"@en ;
@@ -342,24 +342,24 @@ xapi:ActivityExtension a owl:Class ;
 #################################################################
 
 xapi:Result a owl:Class ;
-	rdfs:label "Result"@en ;
-	rdfs:comment "The Class used for a Result object in xAPI."@en ;
-	rdfs:subClassOf xapi:Statement .
+  rdfs:label "Result"@en ;
+  rdfs:comment "The Class used for a Result object in xAPI."@en ;
+  rdfs:subClassOf xapi:Statement .
 
 xapi:Score a owl:Class ;
-	rdfs:label "Score"@en ;
-	rdfs:comment "The Class used for a Score object in xAPI."@en ;
-	rdfs:subClassof xapi:Result .
+  rdfs:label "Score"@en ;
+  rdfs:comment "The Class used for a Score object in xAPI."@en ;
+  rdfs:subClassof xapi:Result .
 
 #################################################################
 ### Result Properties
 #################################################################
 
 xapi:completion a owl:DatatypeProperty ;
-	rdfs:label "completion"@en ;
-	rdfs:comment "A property used to provide the completion status (true or false) of a Result object in xAPI."@en ;
-	rdfs:domain xapi:Result ;
-	rdfs:range xsd:boolean .
+  rdfs:label "completion"@en ;
+  rdfs:comment "A property used to provide the completion status (true or false) of a Result object in xAPI."@en ;
+  rdfs:domain xapi:Result ;
+  rdfs:range xsd:boolean .
 
 xapi:duration a owl:DatatypeProperty ;
   rdfs:label "duration"@en ;
@@ -368,30 +368,30 @@ xapi:duration a owl:DatatypeProperty ;
   rdfs:range xsd:duration .
 
 xapi:response a owl:DatatypeProperty ;
-	rdfs:label "response"@en ;
-	rdfs:comment "A property used to provide a textual response in the Result object."@en ;
-	rdfs:domain xapi:Result ;
-	rdfs:range xsd:string .
+  rdfs:label "response"@en ;
+  rdfs:comment "A property used to provide a textual response in the Result object."@en ;
+  rdfs:domain xapi:Result ;
+  rdfs:range xsd:string .
 
 xapi:success a owl:DatatypeProperty ;
-	rdfs:label "success"@en ;
-	rdfs:comment "A property used to provide the success status (true or false) of a Result object in xAPI."@en ;
-	rdfs:domain xapi:Result ;
-	rdfs:range xsd:boolean .
+  rdfs:label "success"@en ;
+  rdfs:comment "A property used to provide the success status (true or false) of a Result object in xAPI."@en ;
+  rdfs:domain xapi:Result ;
+  rdfs:range xsd:boolean .
 
 #################################################################
 ### Context Classes
 #################################################################
 
 xapi:Context a owl:Class ;
-	rdfs:label "Context"@en ;
-	rdfs:comment "The Class used for an Context object in xAPI."@en ;
-	rdfs:subClassOf xapi:Statement .
+  rdfs:label "Context"@en ;
+  rdfs:comment "The Class used for an Context object in xAPI."@en ;
+  rdfs:subClassOf xapi:Statement .
 
 xapi:ContextActivities a owl:Class ;
-	rdfs:label "ContextActivities"@en ;
-	rdfs:comment "The Class used for a ContextActivities object in xAPI."@en ;
-	rdfs:subClassOf xapi:Context .
+  rdfs:label "ContextActivities"@en ;
+  rdfs:comment "The Class used for a ContextActivities object in xAPI."@en ;
+  rdfs:subClassOf xapi:Context .
 
 
 #################################################################
@@ -399,9 +399,9 @@ xapi:ContextActivities a owl:Class ;
 #################################################################
 
 xapi:registration a owl:DatatypeProperty ;
-	rdfs:label "registration"@en ;
-	rdfs:comment "A property used to provide the registration UUID identifier of a Context object in xAPI."@en ;
-	rdfs:domain xapi:Context ;
+  rdfs:label "registration"@en ;
+  rdfs:comment "A property used to provide the registration UUID identifier of a Context object in xAPI."@en ;
+  rdfs:domain xapi:Context ;
   owl:onDatatype xsd:string ;
   owl:withRestrictions ( xsd:pattern "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[8-9a-bA-B][0-9a-fA-F]{3}-[0-9a-fA-F]{12}" ) .
 
@@ -410,8 +410,8 @@ xapi:registration a owl:DatatypeProperty ;
 #################################################################
 
 xapi:Authority a owl:ObjectProperty ;
-	rdfs:label "Authority"@en ;
-	rdfs:comment "The Class used for the Authority object in xAPI. The Authority is the Agent or Group who is asserting this Statement is true. Verified by the LRS based on authentication. Set by LRS if not provided or if a strong trust relationship between the Learning Record Provider and LRS has not been established."@en ;
+  rdfs:label "Authority"@en ;
+  rdfs:comment "The Class used for the Authority object in xAPI. The Authority is the Agent or Group who is asserting this Statement is true. Verified by the LRS based on authentication. Set by LRS if not provided or if a strong trust relationship between the Learning Record Provider and LRS has not been established."@en ;
   rdfs:subClassOf xapi:Statement .
 
 
@@ -419,9 +419,9 @@ xapi:Authority a owl:ObjectProperty ;
 ### Attachments Classes
 #################################################################
 xapi:Attachments a owl:Class ;
-	rdfs:label "Attachments"@en ;
-	rdfs:comment "The Class used for the Attachments object in xAPI."@en ;
-	rdfs:subClassOf xapi:Statement .
+  rdfs:label "Attachments"@en ;
+  rdfs:comment "The Class used for the Attachments object in xAPI."@en ;
+  rdfs:subClassOf xapi:Statement .
 
 xapi:AttachmentUsageType a owl:Class ;
   rdfs:label "AttachmentUsageType"@en ;
