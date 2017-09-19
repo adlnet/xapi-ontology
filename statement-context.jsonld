@@ -17,34 +17,21 @@
     	"timeStamp": "xapi:timeStamp",
         "actor": "xapi:Actor", 
         "Agent": "xapi:Agent",
-        "account": {
-        	"@id": "xapi:Account",
-        	"@type": "@id"
-        },
-        "name": {
-        	"@id": "xapi:name",
-        	"@container": "@language"
-        },
+        "account": "xapi:Account",
+        "name": "xapi:name",
         "mbox": "xapi:mbox",
         "mbox_sha1sum": "xapi:mbox_sha1sum",
         "openid": "xapi:openid",
         "homePage": "xapi:homePage",
         "verb": "xapi:Verb",
-        "display": {
-        	"@id": "skos:prefLabel",
-        	"@container": "@language"
-        },
+        "display": "xapi:display",
         "object": "xapi:Object",
         "Activity": "xapi:Activity",
         "definition": "xapi:ActivityDefinition",
         "type": {
-        	"@id": "xapi:ActivityType",
         	"@type": "@id"
         },
-        "description": {
-        	"@id": "xapi:description",
-        	"@container": "@language"
-        },
+        "description": xapi:description,
         "result": "xapi:Result",
         "duration": "xapi:duration"
           
