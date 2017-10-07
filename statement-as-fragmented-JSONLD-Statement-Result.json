@@ -1,0 +1,15 @@
+{
+    "@context": {
+        "xapi": "https://w3id.org/xapi/ontology#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "Result": "xapi:Result",
+        "duration": {
+            "@id": "xapi:duration",
+            "@type": "schema:Duration"
+        }
+    },
+    "@id": "https://raw.githubusercontent.com/jhaag75/xapi-ontology/master/statement-as-fragmented-JSONLD-Statement-Result.json",
+    "@type": "Result",
+    "duration": "PT2M17S"
+}
