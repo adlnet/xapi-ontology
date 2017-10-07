@@ -405,6 +405,27 @@ xapi:registration a owl:DatatypeProperty ;
   owl:onDatatype xsd:string ;
   owl:withRestrictions ( xsd:pattern "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[8-9a-bA-B][0-9a-fA-F]{3}-[0-9a-fA-F]{12}" ) .
 
+xapi:category a owl:ObjectProperty ;
+  rdfs:label "category"@en ;
+  rdfs:comment "The property used to provide an an Activity used to categorize the Statement. The category property SHOULD be used to indicate a profile of xAPI behaviors, as well as other categorizations."@en ;
+  rdfs:domain xapi:ContextActivities .
+
+xapi:parent a owl:ObjectProperty ;
+  rdfs:label "parent"@en ;
+  rdfs:comment "The property used to provide a direct relation to the Activity which is the Object of the Statement. In almost all cases there is only one sensible parent or none, not multiple."@en ;
+  rdfs:domain xapi:ContextActivities .
+
+xapi:grouping a owl:ObjectProperty ;
+  rdfs:label "grouping"@en ;
+  rdfs:comment "The property used to provide an an indirect relation to the Activity which is the Object of the Statement."@en ;
+  rdfs:domain xapi:ContextActivities .
+
+xapi:other a owl:ObjectProperty ;
+  rdfs:label "other"@en ;
+  rdfs:comment "The property used to provide an contextActivity relationship that doesn't fit one of the other properties."@en ;
+  rdfs:domain xapi:ContextActivities .
+
+
 #################################################################
 ### Authority Classes
 #################################################################
