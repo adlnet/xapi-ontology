@@ -31,7 +31,7 @@
         "type": {
         	"@type": "@id"
         },
-        "description": xapi:description,
+        "description": "xapi:description",
         "result": "xapi:Result",
         "duration": "xapi:duration"
           
